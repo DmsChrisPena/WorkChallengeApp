@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+$information-phone: "only screen and (max-width : 620px)";
+
+body, html {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+// Login
+section#login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.container {
+		width: 320px;
+		margin-top: 36px;
+		.card-media-content {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(63, 81, 181, .25);
+			.card-media-container {
+				padding-top: 64px;
+				div {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					h1 {
+						color: white;
+					}
+					img {
+						height: 224px;
+					}
+				}
+			}
+		}
+	}
+	.card-actions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	section#login {
+		flex: 1;
+		height: 100%;
+		.container {
+			width: 100%;
+			margin: 0 0px;
+			padding: 0 0px;
+		}
+	}
+}
+
+// Login Animations
+.confirm-password-appear {
+   opacity: 0.70;
+}
+
+.confirm-password-appear.confirm-password-appear-active {
+   opacity: 1;
+   transition: opacity 500ms ease-in;
+}
+
+.confirm-password-enter {
+   opacity: 0.01;
+}
+
+.confirm-password-enter.confirm-password-enter-active {
+   opacity: 1;
+   transition: opacity 500ms ease-in;
+}
+
+.confirm-password-leave {
+   opacity: 1;
+}
+
+.confirm-password-leave.confirm-password-leave-active {
+   opacity: 0.01;
+   transition: opacity 500ms ease-in;
+}
+
+.error-msg {
+	color: #F44336;
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+// Footer
+.footer-tab {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+
+
