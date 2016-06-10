@@ -5,5 +5,9 @@ Meteor.publish('weightLog.self', (selfUserId) => {
 });
 
 Meteor.publish('user.self', (selfUserId) => {
-	return Meteor.users({_id: selfUserId});
-})
+	return Meteor.users.find({_id: selfUserId});
+});
+
+Meteor.publish('chat.all', () => {
+	return Api.Chat.find({});
+});
